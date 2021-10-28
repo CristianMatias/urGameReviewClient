@@ -1,13 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import prueba from './src/prueba';
 
-export default function App() {
+export default function prueba() {
   return (
     <View style={styles.container}>
-      <Text>Bancatela maricón</Text>
-     
+      <Text>NO</Text>
       <StatusBar style="auto" />
     </View>
   );
