@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function prueba() {
   return (
     <View style={styles.container}>
-      <Text>AEA</Text>
+      <Text>AEA.</Text>
       <StatusBar style="auto" />
     </View>
   );
