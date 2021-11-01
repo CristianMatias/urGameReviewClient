@@ -1,34 +1,28 @@
+import React, { useEffect, useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { mainConnection } from './src/service/MainService';
+import styles from './styles/styles';
+import Header from './src/customElements/header';
 
-export default class App extends React.Component {
-  state = { reponse: ""}
+export default function App() {
+  const [response, setResponse] = useState();
+  const headerBar = Header();
 
-  componentDidMount(){
+  useEffect(() => {
     mainConnection().then(res => {
-      this.state.reponse = res.data
-    }).catch(err => console.log('Error cause: ' + err))
-  }
+      setResponse(res.data)
+    }).catch(err => {
+      setResponse(err)
+    })
+  })
 
-  render(){
     return (
-      <View style={styles.container}>
-        <Text>{this.state.reponse}</Text>
+      <View style={styles.background}>
+        {() => Header()}
+        <Text style={styles.input}>{response}</Text>
         <StatusBar style="auto" />
       </View>
     );
-  }
-
   
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
