@@ -1,25 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { Text, View } from 'react-native';
 import { mainConnection } from './src/service/MainService';
 import styles from './styles/styles';
 
-export default class App extends React.Component {
-  state = { reponse: ""}
+export default function App() {
+  const [response, setResponse] = useState();
 
-  componentDidMount(){
+  useEffect(() => {
     mainConnection().then(res => {
-      this.state.reponse = res.data
-    }).catch(err => console.log('Error cause: ' + err))
-  }
+      setResponse(res.data)
+    }).catch(err => {
+      setResponse(err)
+    })
+  })
 
-  render(){
     return (
-      <View style={styles.input}>
-        <Text>{this.state.reponse}</Text>
+      <View style={styles.background}>
+        <Text style={styles.input}>{response}</Text>
         <StatusBar style="auto" />
       </View>
     );
-  }
   
 }
