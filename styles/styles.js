@@ -8,12 +8,20 @@ export default StyleSheet.create({
         justifyContent: 'center',
     },
     title: {
-        fontSize: 20,
         fontWeight: "bold",
+        letterSpacing: 1,
+        fontSize: 20,
         color: '#FFFF'
     },
     input: {
         color: '#FFFF'
+    },
+    header: {
+        width: '100%',
+        height: '100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 })
 
