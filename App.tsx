@@ -1,14 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View } from 'react-native';
 import prueba from './src/prueba';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>UrgamesReview</Text>
+      <Text>Login</Text>
+
+      <TextInput
+      style={{
+        height: 60,
+        borderColor: '#000000',
+        borderWidth:1
+      }}
+        defaultValue="nombre usuario"
+
+       />
      
-      <StatusBar style="auto" />
+      
     </View>
   );
 }
