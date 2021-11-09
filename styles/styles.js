@@ -18,10 +18,24 @@ export default StyleSheet.create({
     },
     header: {
         width: '100%',
-        height: '100%',
+        height: '33%',
         flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
+        alignItems: 'flex-end',
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+        borderTopWidth: 2,
+        borderWidth: 2,
+        backgroundColor: "#9A9898"
+    },
+    iconProfile: {
+        flex: 1,
+        width: 45,
+        marginLeft: '45%',
+        marginTop: '10%',
+        resizeMode: 'contain'
+    },
+    imageHeader: {
+        marginLeft: '40%'
     }
 })
 
