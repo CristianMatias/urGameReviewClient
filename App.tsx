@@ -8,16 +8,29 @@ export default function App() {
     <View style={styles.container}>
       <Text>Login</Text>
 
+      <Text>Nombre Usuario</Text>
       <TextInput
       style={{
         height: 60,
         borderColor: '#000000',
         borderWidth:1
       }}
-        defaultValue="nombre usuario"
+        
 
        />
-     
+    <Text>Contraseña</Text>
+      
+
+     <TextInput
+      
+      style={{
+        height:30,
+        borderColor: '#000000',
+        borderWidth:1
+        
+      }}
+        secureTextEntry={true}
+     />
       
     </View>
   );
