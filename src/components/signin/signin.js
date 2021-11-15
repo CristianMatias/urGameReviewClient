@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, Image, Text } from 'react-native';
-import styles from '../../../styles/styles';
+import styles from '../../../styles/styleSignin';
 import {signup} from '../../service/UserService'
 import base64 from 'react-native-base64'
 
