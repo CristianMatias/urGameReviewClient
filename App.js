@@ -19,6 +19,7 @@ export default function App() {
         <Stack.Screen 
           name="Iniciar Sesión" 
           component={Login} 
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Registrarse"
@@ -27,26 +28,32 @@ export default function App() {
         <Stack.Screen
           name="HomeScreen"
           component={Home}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Information"
           component={Information}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="GameProfile"
           component={GameProfile}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="UserProfile"
           component={UserProfile}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="VisitorProfile"
           component={VisitorProfile}
+          options={{headerShown: false}}
         />
         <Stack.Screen
           name="Review"
           component={Review}
+          options={{headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>
