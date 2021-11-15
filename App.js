@@ -11,11 +11,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen 
-          name="Login" 
+          name="Iniciar Sesión" 
           component={Login} 
         />
         <Stack.Screen
-          name="SignIn"
+          name="Registrarse"
           component={SignIn}
         />
       </Stack.Navigator>

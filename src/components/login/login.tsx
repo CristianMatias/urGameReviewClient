@@ -30,7 +30,7 @@ export default function Login({navigation}) {
         secureTextEntry={true}
      />
 
-     <Text style={{color: 'blue'}} onPress={() => navigation.push('SignIn')}>¿No tienes cuenta? Regístrate</Text>
+     <Text style={{color: 'blue'}} onPress={() => navigation.push('Registrarse')}>¿No tienes cuenta? Regístrate</Text>
       
     </View>
   );
