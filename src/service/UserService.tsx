@@ -20,3 +20,18 @@ export function signup(username, email, password) {
     .catch(err => console.log(err))
 }
 
+export function login(username, password) {
+    axios({
+        method: "post",
+        url: BASE_URL + routes.LOGIN,
+        data: {
+            "nickname": username,
+            "password": password
+        },
+        headers: { 
+            "Accept": 'application/json',
+            "Content-Type": "application/json"},
+    })
+    .then(response => {return response.data})
+    .catch(err => console.log(err))
+}

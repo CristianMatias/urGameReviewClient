@@ -4,7 +4,7 @@ import styles from '../../../styles/styleSignin';
 import {signup} from '../../service/UserService'
 import base64 from 'react-native-base64'
 
-export default function SignIn() {
+export default function SignIn({navigation}) {
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
