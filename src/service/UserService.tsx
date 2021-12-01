@@ -21,18 +21,19 @@ export function signup(username, email, password) {
     .catch(err => console.log(err))
 }
 
-export function login(username, password) {
+export function login(username, pwd) {
     axios({
-        method: "post",
+        method: "POST",
         url: BASE_URL + routes.LOGIN,
-        data: {
-            "nickname": username,
-            "password": password
-        },
+        params: {"user": username, "pwd": pwd},
         headers: { 
             "Accept": 'application/json',
-            "Content-Type": "application/json"},
+            "Content-Type": "application/json"
+        }
     })
-    .then(response => {return response.data})
+    .then(response => {
+        console.log(response.data)
+        return response.data
+    })
     .catch(err => console.log(err))
 }

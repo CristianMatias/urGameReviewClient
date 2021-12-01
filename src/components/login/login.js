@@ -10,7 +10,7 @@ export default function Login({navigation}) {
   const [password, setPassword] = useState('');
 
   function logUp(){
-    login(username, base64.encode(password))
+    login(username, password)
     //navigation.push('HomeScreen')
   }
 
