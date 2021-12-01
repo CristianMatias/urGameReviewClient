@@ -23,20 +23,6 @@ export function signup(username, email, password) {
 
 export function login(username, password) {
     axios({
-        method: "POST",
-        url: BASE_URL + routes.LOGIN,
-        params: {username, password},
-        headers: { 
-            "Accept": 'application/json',
-            "Content-Type": "application/json"
-        }
-    })
-    .then(response => {return response.data})
-    .catch(err => console.log(err))
-}
-
-export function login(username, password) {
-    axios({
         method: "post",
         url: BASE_URL + routes.LOGIN,
         data: {
